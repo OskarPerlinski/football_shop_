@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:r_gol/core/dependency_injection/dependency_injection.dart';
+import 'package:r_gol/presentation/router/app_router.dart';
 
 void main() async {
   await setupDependencies();
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Scaffold(),
     );
   }
 }
