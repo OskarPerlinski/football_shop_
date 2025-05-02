@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:r_gol/core/dependency_injection/dependency_injection.dart';
 
-void main() {
+void main() async {
+  await setupDependencies();
   runApp(const MyApp());
 }
 
@@ -18,4 +20,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
