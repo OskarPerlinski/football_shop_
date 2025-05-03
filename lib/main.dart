@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:r_gol/core/dependency_injection/dependency_injection.dart';
 import 'package:r_gol/presentation/router/app_router.dart';
+import 'package:r_gol/presentation/theme/app_theme.dart';
 
 void main() async {
   await setupDependencies();
@@ -15,9 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: AppTheme.getTheme(),
     );
   }
 }
