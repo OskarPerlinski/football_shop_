@@ -43,7 +43,7 @@ class SignInPage extends HookWidget {
             context: context,
             barrierDismissible: false,
             builder: (context) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator(color: AppColors.purple,));
             },
           );
         case SignInHideLoading():

@@ -1,15 +1,21 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:r_gol/data/auth/datasource/email_data_source.dart';
+import 'package:r_gol/data/auth/datasource/reset_password_data_source.dart';
 import 'package:r_gol/data/user/datasource/user_data_source.dart';
 import 'package:r_gol/domain/auth/repository/auth_repository.dart';
 
 @Singleton(as: AuthRepository)
 class AuthRepositoryImpl implements AuthRepository {
-  AuthRepositoryImpl(this._emailDataSource, this._userDataSource);
+  AuthRepositoryImpl(
+    this._emailDataSource,
+    this._userDataSource,
+    this._resetPasswordDataSource,
+  );
 
   final EmailDataSource _emailDataSource;
   final UserDataSource _userDataSource;
+  final ResetPasswordDataSource _resetPasswordDataSource;
 
   @override
   Future<UserCredential> getSignUpWithEmail(
@@ -37,5 +43,10 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<UserCredential> getSignIn(String email, String password) async {
     return await _emailDataSource.getSignIn(email, password);
+  }
+
+  @override
+  Future<void> resetPassword(String email) async {
+    return await _resetPasswordDataSource.resetPassword(email);
   }
 }
