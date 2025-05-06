@@ -9,13 +9,15 @@ import 'package:r_gol/presentation/screens/auth/widgets/socials_button.dart';
 import 'package:r_gol/presentation/theme/app_dimens.dart';
 import 'package:r_gol/presentation/theme/app_spacings.dart';
 import 'package:r_gol/presentation/widgets/button/basic_button.dart';
-import 'package:r_gol/presentation/widgets/password_field/password_field.dart';
+import 'package:r_gol/presentation/screens/auth/widgets/password_field.dart';
 
 class SignInPage extends HookWidget {
   const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final passwordController = useTextEditingController();
+
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -30,7 +32,7 @@ class SignInPage extends HookWidget {
                 AppSpacings.xLarge(),
                 TextFormField(decoration: InputDecoration(hintText: 'Email')),
                 AppSpacings.medium(),
-                PasswordField(text: 'Password'),
+                PasswordField(text: 'Password', controller: passwordController),
                 AppSpacings.xLarge(),
                 BasicButton(onPressed: () {}, text: 'Login to Account'),
                 AppSpacings.small(),

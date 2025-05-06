@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824526739328",
+    "project_id": "r-gol-44c9c",
+    "storage_bucket": "r-gol-44c9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824526739328:android:26f15eeeaead9be5ccd365",
+        "android_client_info": {
+          "package_name": "com.example.r_gol"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3ySmtn8n80LosvXB7bFd5xvvLkyGgjIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
