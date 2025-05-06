@@ -33,4 +33,9 @@ class AuthRepositoryImpl implements AuthRepository {
 
     return userCredential;
   }
+
+  @override
+  Future<UserCredential> getSignIn(String email, String password) async {
+    return await _emailDataSource.getSignIn(email, password);
+  }
 }

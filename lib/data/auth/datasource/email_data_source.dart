@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
-import 'package:r_gol/domain/auth_exception/auth_exception.dart';
+import 'package:r_gol/domain/auth/auth_exception/auth_exception.dart';
 
 @singleton
 class EmailDataSource {
@@ -12,6 +12,17 @@ class EmailDataSource {
   ) async {
     try {
       return await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+    } on FirebaseAuthException catch (e) {
+      throw AuthException.fromFirebase(e);
+    }
+  }
+
+  Future<UserCredential> getSignIn(String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );

@@ -1,7 +1,7 @@
 import 'package:hooked_bloc/hooked_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:r_gol/domain/auth/repository/auth_repository.dart';
-import 'package:r_gol/domain/auth_exception/auth_exception.dart';
+import 'package:r_gol/domain/auth/auth_exception/auth_exception.dart';
 import 'package:r_gol/presentation/screens/auth/sign_up/cubit/sign_up_action.dart';
 import 'package:r_gol/presentation/screens/auth/sign_up/cubit/sign_up_state.dart';
 
