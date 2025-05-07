@@ -12,7 +12,20 @@
           "package_name": "com.example.r_gol"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "824526739328-58e7air036peerd1tjaj0m3bojm662as.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.r_gol",
+            "certificate_hash": "a94766ebd8e33a4748c284a5e09699511d2a2882"
+          }
+        },
+        {
+          "client_id": "824526739328-a4mq3p49v6r9ojfrlbjdn37irl7crofs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB3ySmtn8n80LosvXB7bFd5xvvLkyGgjIY"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824526739328-a4mq3p49v6r9ojfrlbjdn37irl7crofs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "824526739328-8dh17n9d4igjojl8umvdi8c9lar4haq1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.rGol"
+              }
+            }
+          ]
         }
       }
     }
