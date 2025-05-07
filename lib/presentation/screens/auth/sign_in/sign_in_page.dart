@@ -43,7 +43,9 @@ class SignInPage extends HookWidget {
             context: context,
             barrierDismissible: false,
             builder: (context) {
-              return const Center(child: CircularProgressIndicator(color: AppColors.purple,));
+              return const Center(
+                child: CircularProgressIndicator(color: AppColors.purple),
+              );
             },
           );
         case SignInHideLoading():
@@ -117,7 +119,9 @@ class SignInPage extends HookWidget {
                   SocialsButton(
                     text: 'Sign in with Google',
                     assetName: AppAssets.googleIcon,
-                    onPressed: () {},
+                    onPressed: () {
+                      cubit.loginWithGoogle();
+                    },
                   ),
                 ],
               ),
