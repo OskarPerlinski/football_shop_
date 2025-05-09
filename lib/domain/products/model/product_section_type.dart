@@ -1,3 +1,4 @@
 enum ProductSectionType {
   newProducts,
+  topSellings,
 }

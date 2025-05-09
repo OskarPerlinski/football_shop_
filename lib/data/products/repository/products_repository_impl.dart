@@ -20,4 +20,14 @@ class ProductsRepositoryImpl implements ProductsRepository {
       throw Exception('Failed to fetch new products: $e');
     }
   }
+
+  @override
+  Future<List<ProductsModel>> getTopSellings() async {
+    try {
+      final dtoList = await _productsDataSource.getTopSellings();
+      return dtoList.map((dto) => _productsMapper.toDomain(dto)).toList();
+    } catch (e) {
+      throw Exception('Failed to load top sellings products: $e');
+    }
+  }
 }
