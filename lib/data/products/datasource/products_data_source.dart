@@ -22,4 +22,20 @@ class ProductsDataSource {
       throw Exception('Failed to load products.');
     }
   }
+
+  Future<List<ProductsModelDto>> getTopSellings() async {
+    try {
+      final snapshot =
+          await _firestore
+              .collection('products')
+              .orderBy('totalSold', descending: true)
+              .get();
+
+      return snapshot.docs
+          .map((doc) => ProductsModelDto.fromJson(doc.data()))
+          .toList();
+    } catch (e) {
+      throw Exception('Failed to load products');
+    }
+  }
 }

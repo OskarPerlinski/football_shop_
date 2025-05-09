@@ -19,7 +19,15 @@ class HomePage extends HookWidget {
             children: [
               AppBanner(),
               AppSpacings.xLarge(),
-              ProductsList(text: 'Recently Added', type: ProductSectionType.newProducts)
+              ProductsList(
+                text: 'Recently Added',
+                type: ProductSectionType.newProducts,
+              ),
+              AppSpacings.large(),
+              ProductsList(
+                text: 'Top Sellings',
+                type: ProductSectionType.topSellings,
+              ),
             ],
           ),
         ),

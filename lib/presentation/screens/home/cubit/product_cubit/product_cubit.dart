@@ -17,6 +17,8 @@ class ProductCubit extends ActionCubit<ProductState, ProductAction> {
       final products = switch (type) {
         ProductSectionType.newProducts =>
           await _productsRepository.getNewProducts(),
+        ProductSectionType.topSellings =>
+          await _productsRepository.getTopSellings(),
       };
       emit(ProductState.loaded(products));
     } catch (e) {
