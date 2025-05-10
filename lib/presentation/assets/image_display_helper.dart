@@ -7,4 +7,7 @@ class ImageDisplayHelper {
   static String generateLeagueCategoryImageURL(String title) {
     return AppUrls.leagueImage + title + AppUrls.alt;
   }
+  static String generateBrandsCategoryImageURL(String title) {
+    return AppUrls.brandsImage + title + AppUrls.alt;
+  }
 }

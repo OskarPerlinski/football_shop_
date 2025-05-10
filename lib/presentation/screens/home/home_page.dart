@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:r_gol/domain/products/model/product_section_type.dart';
 import 'package:r_gol/presentation/screens/home/widgets/app_banner.dart';
+import 'package:r_gol/presentation/screens/home/widgets/brands_category_list.dart';
 import 'package:r_gol/presentation/screens/home/widgets/league_category_list.dart';
 import 'package:r_gol/presentation/theme/app_spacings.dart';
 import 'package:r_gol/presentation/widgets/appbar/basic_appbar.dart';
@@ -31,6 +32,8 @@ class HomePage extends HookWidget {
                 text: 'Top Sellings',
                 type: ProductSectionType.topSellings,
               ),
+              AppSpacings.xLarge(),
+              BrandCategoryList(),
             ],
           ),
         ),
