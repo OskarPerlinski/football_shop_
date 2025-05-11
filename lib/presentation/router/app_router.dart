@@ -5,12 +5,13 @@ import 'package:r_gol/presentation/screens/auth/reset_password/reset_password_pa
 import 'package:r_gol/presentation/screens/auth/sign_in/sign_in_page.dart';
 import 'package:r_gol/presentation/screens/auth/sign_up/sign_up_page.dart';
 import 'package:r_gol/presentation/screens/home/home_page.dart';
+import 'package:r_gol/presentation/screens/splash/splash_page.dart';
 
 part 'app_router.g.dart';
 
 class AppRouter {
   static final router = GoRouter(
-    initialLocation: AppRoutes.signUp,
+    initialLocation: AppRoutes.splashPage,
     routes: $appRoutes,
   );
 }
@@ -44,5 +45,13 @@ class HomePageRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     return const HomePage();
+  }
+}
+
+@TypedGoRoute<SplashPageRoute>(path: AppRoutes.splashPage)
+class SplashPageRoute extends GoRouteData {
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return const SplashPage();
   }
 }
